@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "eslint": "^8.0.1",
