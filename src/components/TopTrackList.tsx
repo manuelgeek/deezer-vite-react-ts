@@ -1,9 +1,9 @@
 import { useGetTopTrack } from '../hooks/useGetTopTrack'
-import { Artist } from '../types/types'
+import { TopTrackListProps } from '../types/types'
 import LoadingState from './LoadingState'
 import TopTrackListItem from './TopTrackListItem'
 
-function TopTrackList({ artist }: { artist: Artist }) {
+function TopTrackList({ artist }: TopTrackListProps) {
   const { isLoading, topTracks } = useGetTopTrack({ artist })
 
   return (
