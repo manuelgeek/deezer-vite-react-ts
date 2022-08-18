@@ -84,5 +84,6 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'no-shadow': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 }
