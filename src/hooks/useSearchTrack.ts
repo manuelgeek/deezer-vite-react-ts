@@ -1,13 +1,15 @@
-import { useCallback, useState } from 'react'
+import { useCallback } from 'react'
 import { useQuery } from 'react-query'
 import { Track } from '../types/types'
+import { useAppSelector } from './hooks'
 import useDebounce from './useDebounce'
 
 export function useSearchTrack() {
-  const [query, setQuery] = useState('')
+  const search = useAppSelector((state) => state.search.value)
+
   const { VITE_PROXY_URL, VITE_API_URL } = import.meta.env
 
-  const debouncedSearchTerm = useDebounce(query, 300)
+  const debouncedSearchTerm = useDebounce(search, 300)
   const searchTracks = useCallback(async () => {
     return fetch(
       `${VITE_PROXY_URL}/${VITE_API_URL}/search/track/?q=${debouncedSearchTerm}`
@@ -22,8 +24,7 @@ export function useSearchTrack() {
   // console.log({ data })
 
   return {
-    query,
-    setQuery,
+    search,
     isLoading,
     data,
     debouncedSearchTerm,

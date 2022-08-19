@@ -11,14 +11,12 @@ function TrackCard({ track }: TrackCardProp) {
             src={track?.album?.cover_medium}
             alt="blog"
           />
-          <div className="p-6">
+          <div className="p-3 md:p-6 text-left">
             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
               {track?.title}
             </h1>
-            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-              <Link to={`/artist/${track?.artist?.id}`}>
-                {track?.artist?.name}
-              </Link>
+            <h2 className="tracking-widest text-sm title-font font-medium text-gray-400 mb-1">
+              {track?.artist?.name}
             </h2>
             <p className="leading-relaxed mb-3">{track?.album?.title}</p>
           </div>

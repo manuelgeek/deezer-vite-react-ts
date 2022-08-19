@@ -18,7 +18,7 @@ function Artist() {
           Back
         </Link>
       </div>
-      <section className="text-gray-600 border-b border-t border-r border-gray-300  md:flex body-font">
+      <section className="text-gray-600 border-l md:border-l-0 border-b border-t border-r border-gray-300 md:flex body-font">
         <div className="w-full bg-gray-200 md:px-4 md:w-8/12">
           <div className="container mx-auto md:flex md:px-5 md:py-24 md:flex-row-reverse flex-col-reverse items-center">
             <div className=" md:w-4/12 w-full mb-10 md:mb-0">

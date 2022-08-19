@@ -10,7 +10,7 @@ function TopTrackList({ artist }: TopTrackListProps) {
     <div className="w-full">
       <h3 className="font-bold text-2xl">Top Tracks</h3>
       {}
-      <ul className="w-full divide-y-2 divide-gray-100">
+      <ul className="w-full divide-y-2 divide-gray-100 text-left">
         {isLoading ? (
           <LoadingState />
         ) : (
