@@ -3,7 +3,7 @@ import { TrackCardProp } from '../types/types'
 
 function TrackCard({ track }: TrackCardProp) {
   return (
-    <div className="w-full p-4 md:w-1/4">
+    <div>
       <Link to={`/artist/${track?.artist?.id}`}>
         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
           <img

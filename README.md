@@ -42,7 +42,9 @@ yarn test -u
 ## Features done
 
 - Search Artists
-- Celar search field
+- List artis results
+- Infinite scroll for searched artists
+- Clear search field
 - Keep Search Term in store
 - Display list of search artists
 - Single artist view with fans, top tracks

@@ -1,3 +1,4 @@
+import InfiniteScroll from 'react-infinite-scroll-component'
 import GridEmptyState from '../components/GridEmptyState'
 import HomeHeader from '../components/HomeHeader'
 import LoadingState from '../components/LoadingState'
@@ -5,13 +6,14 @@ import TrackCard from '../components/TrackCard'
 import { useSearchTrack } from '../hooks/useSearchTrack'
 
 function Home() {
-  const { search, data, isLoading, debouncedSearchTerm } = useSearchTrack()
+  const { search, data, isLoading, debouncedSearchTerm, fetchNextData } =
+    useSearchTrack()
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen">
       <HomeHeader />
       <div className="flex justify-center">
-        <div className="w-full md:w-10/12 lg:w-10/12">
+        <div className="w-full">
           {debouncedSearchTerm && (
             <h3 className="text-left py-4 px-4">
               Search results for :{' '}
@@ -22,9 +24,25 @@ function Home() {
             {isLoading ? (
               <LoadingState />
             ) : data && debouncedSearchTerm ? (
-              data?.data?.map((track) => (
-                <TrackCard track={track} key={track.id} />
-              ))
+              <InfiniteScroll
+                dataLength={data?.data?.length}
+                next={fetchNextData}
+                hasMore={Boolean(data?.next)}
+                loader={<LoadingState />}
+                endMessage={
+                  <div className="flex w-full justify-center text-xl">
+                    <b>Yay! You have seen it all</b>
+                  </div>
+                }
+              >
+                <div className="flex flex-wrap">
+                  {data?.data?.map((track) => (
+                    <div key={track.id} className="w-full p-4 md:w-1/5">
+                      <TrackCard track={track} />
+                    </div>
+                  ))}
+                </div>
+              </InfiniteScroll>
             ) : (
               <GridEmptyState
                 message={

@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState: { value: string } = {
-  value: 'test',
+  value: '',
 }
 
 export const searchSlice = createSlice({

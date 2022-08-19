@@ -2,7 +2,7 @@
 
 exports[`Jest Snapshot Home > Matches DOM Snapshot on empty 1`] = `
 <div
-  className="w-full"
+  className="w-full min-h-screen"
 >
   <header
     className="flex justify-center bg-gray-200 border-b border-gray-300 py-2 md:py-3"
@@ -34,7 +34,7 @@ exports[`Jest Snapshot Home > Matches DOM Snapshot on empty 1`] = `
           onChange={[Function]}
           placeholder="Type here to search ...."
           type="text"
-          value="test"
+          value=""
         />
         <button
           className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -67,19 +67,8 @@ exports[`Jest Snapshot Home > Matches DOM Snapshot on empty 1`] = `
     className="flex justify-center"
   >
     <div
-      className="w-full md:w-10/12 lg:w-10/12"
+      className="w-full"
     >
-      <h3
-        className="text-left py-4 px-4"
-      >
-        Search results for :
-         
-        <span
-          className="font-bold"
-        >
-          "test"
-        </span>
-      </h3>
       <div
         className="flex flex-wrap"
       >
@@ -116,7 +105,7 @@ exports[`Jest Snapshot Home > Matches DOM Snapshot on empty 1`] = `
 
 exports[`Jest Snapshot Home > Matches DOM Snapshot on search 1`] = `
 <div
-  className="w-full"
+  className="w-full min-h-screen"
 >
   <header
     className="flex justify-center bg-gray-200 border-b border-gray-300 py-2 md:py-3"
@@ -181,7 +170,7 @@ exports[`Jest Snapshot Home > Matches DOM Snapshot on search 1`] = `
     className="flex justify-center"
   >
     <div
-      className="w-full md:w-10/12 lg:w-10/12"
+      className="w-full"
     >
       <div
         className="flex flex-wrap"

@@ -12,4 +12,7 @@ export default defineConfig({
     setupFiles: './src/test/utils/setup.ts',
     css: true,
   },
+  preview: {
+    port: Number(process.env.PORT) || 5000,
+  },
 })

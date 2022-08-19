@@ -69,3 +69,9 @@ export interface TopTrackListItemProps {
 export interface TopTrackListProps {
   artist: Artist
 }
+
+export interface TrackData {
+  data: Track[]
+  next?: string | null
+  total: number
+}
