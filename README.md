@@ -1,6 +1,10 @@
 # Deezer React Application
 
 > A React app creaed with vite, using TS, Tailwindcss, Rect, Redux
+>
+> Link: [https://deezer-vite-react.herokuapp.com/](https://vue-calendar-task.herokuapp.com/)
+>
+> ![badge](https://github.com/manuelgeek/deezer-vite-react-ts/workflows/Lint%20and%20Test%20CI/badge.svg)
 
 ## Set up
 
