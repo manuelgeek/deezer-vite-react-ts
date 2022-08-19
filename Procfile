@@ -1,1 +1,1 @@
-web: npm run preview --bind :$PORT
+web: npm run preview 
