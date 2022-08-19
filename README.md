@@ -1,30 +1,90 @@
+# Deezer React Application
+
+> A React app creaed with vite, using TS, Tailwindcss, Rect, Redux
+
+## Set up
+
+```bash
+# install dependencies
+yarn install
+
+# dev command
+yarn dev
+#or
+vite
+
+# testing
+yarn test
+#or
+vitest
+# update snapshot
+yarn test -u
+
+```
+
+## Tools used
+
+- Vite
+- React
+- TypeScript
+- Vitest for test with jest
+- Redux for store
+- Tailwindcss
+- Eslint
+- Prettier
+- Husky for pre-commit hooks
+- Github actions for CI/CD , Heroku Deploy
+
+## Features done
+
+- Search Artists
+- Celar search field
+- Keep Search Term in store
+- Display list of search artists
+- Single artist view with fans, top tracks
+
+### Dev
+
+Hosted on heroku through Github Actions, trigger is done on `main` branch for demo purposes, an Ideal development environment will have different dedicated branches
+
+Github actions used for Running Tests and Lints
+
+I've also use pre commit hooks to prevent un formatted code from being pushed upstream
+
+.env file is commited for ease of testing, not ideal in normal developments
+
+---
+
+## ------DVT--------------------
+
 # DVT Assessment - Deezer Angular Application
 
-### This is a boilerplate project for DVT Angular Assessment - Deezer Application. 
+### This is a boilerplate project for DVT Angular Assessment - Deezer Application.
+
 <br/>
 
 > This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 <br/>
 
-## Deezer is an internet-based music streaming service.  You are required to implement an Angular app to explore its database.
+## Deezer is an internet-based music streaming service. You are required to implement an Angular app to explore its database.
 
 <br />
 
-1.  Users should be able to search for artists.  For every artist found show the artist's picture and the number of fans they have.  On bigger screens, with more available space, also include the total number of albums.
+1.  Users should be able to search for artists. For every artist found show the artist's picture and the number of fans they have. On bigger screens, with more available space, also include the total number of albums.
 
 <br />
 
-2.  Clicking/tapping the artist must allow users to see basic information about them, like its total number of fans.  Also show its top 5 tracks along with a list of all their albums.  For every album include the year in which it was released.
+2.  Clicking/tapping the artist must allow users to see basic information about them, like its total number of fans. Also show its top 5 tracks along with a list of all their albums. For every album include the year in which it was released.
 
 <br />
 
-Be sure to follow best practices and to demonstrate the skills you've learnt to develop a modern web app.  Keep in mind that our team intends to add more features to your code and that they expect this to be quick and easy for them to do.
+Be sure to follow best practices and to demonstrate the skills you've learnt to develop a modern web app. Keep in mind that our team intends to add more features to your code and that they expect this to be quick and easy for them to do.
 
 <br />
 
 We encourage you to add more assets as necessary and to enhance content with colour and imagery, wherever it makes sense, so users may enjoy using your app. This is equally important to us when reviewing your assessment.
- 
+
 <br />
 
 Please make sure that all unit tests and linting are passing as this can affect your marking.
@@ -37,21 +97,21 @@ You can also deploy your application to a free hosting service such as Heroku or
 
 ## IMPORTANT
 
-Most browsers enforce the same-origin restriction which may prevent HTTP calls to the Deezer API.  To circumvent this problem and to enable CORS (Cross-origin resource sharing) in your app, you can use this two solutions:
+Most browsers enforce the same-origin restriction which may prevent HTTP calls to the Deezer API. To circumvent this problem and to enable CORS (Cross-origin resource sharing) in your app, you can use this two solutions:
 
 <br />
 
-- Simply forward requests through a public CORS proxy that adds the Access-Control-Allow-Origin header to any OPTIONS pre-flight response.  For example, when using the https://cors-anywhere.herokuapp.com/ proxy, then a call intended to https://api.deezer.com/search?q=eminem must become a call to https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=eminem in your code. 
-Do not forget to activate Heroku permission to use the proxy by clicking on the button Request temporary access to the demo server from this URL https://cors-anywhere.herokuapp.com/corsdemo
+- Simply forward requests through a public CORS proxy that adds the Access-Control-Allow-Origin header to any OPTIONS pre-flight response. For example, when using the https://cors-anywhere.herokuapp.com/ proxy, then a call intended to https://api.deezer.com/search?q=eminem must become a call to https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=eminem in your code.
+  Do not forget to activate Heroku permission to use the proxy by clicking on the button Request temporary access to the demo server from this URL https://cors-anywhere.herokuapp.com/corsdemo
 
 <br />
 
 - You can also use the Angular proxy configuration to circumvent CORS issue https://angular.io/guide/build#proxying-to-a-backend-server.
 
-<br /> 
+<br />
 
 > The project was bootstrapped with Angular CLI 11.2.8 using this command: `ng new musicdb-app`
- 
+
 <br />
 
 You are also welcome to create a fresh Angular Project from your local environment, publish it on GitHub and share the link with us.
@@ -80,7 +140,6 @@ Artists view [Mobile]
 https://raw.githubusercontent.com/DVT/musicdb-app-angular/master/wireframes/artist-mobile-view.png
 
 <br />
-
 
 Artist details view [Desktop]
 
